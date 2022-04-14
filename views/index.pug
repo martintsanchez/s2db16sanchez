@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}. Let's get started!
+
+  <button (type="button", onclick="moreClaps()", class="btn btn-secondary")>Press Me</button>
+
+  <div id="target">Clap for me</div>
+
+  script.
+    var clap_count = 0;
+
+    function moreClaps() {
+      clap_count = clap_count + 2;
+    
+    const div = document.querySelector('div')  
+    div.innerHTML = "Clap " + clap_count + " times";
+
+    
+    }
+
